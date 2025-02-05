@@ -61,8 +61,15 @@ const multiply = require('./index')
 // })
 
 //string comparison testing 
-test("string comperasion", ()=>{
-    const name = "Koushik";
-    expect(name).toMatch(/Ko/);
-    expect(name).not.toMatch(/A/)
+// test("string comperasion", ()=>{
+//     const name = "Koushik";
+//     expect(name).toMatch(/Ko/);
+//     expect(name).not.toMatch(/A/)
+// })
+
+
+//Arrray testing 
+test("array testing ",()=>{
+    const array=["Koushik", "Rahul", "Suman", "Mohit", "Rohan"]
+    expect(array).toContain("Rahul")
 })
