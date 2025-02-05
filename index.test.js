@@ -26,10 +26,30 @@ const multiply = require('./index')
 // })
 
 //null value testing 
-test ("null value ", ()=>{
-    const value = null;
-    expect (value).toBeNull();
-    expect(value).toBeDefined();
-    expect(value).not.toBeUndefined();
-    expect(value).not.toBeTruthy();
+// test ("null value ", ()=>{
+//     const value = null;
+//     expect (value).toBeNull();
+//     expect(value).toBeDefined();
+//     expect(value).not.toBeUndefined();
+//     expect(value).not.toBeTruthy();
+// })
+
+//Zero value testing 
+// test ("Zero value ", ()=>{
+//     const value = 0;
+//     expect (value).not.toBeNull();
+//     expect(value).toBeDefined();
+//     expect(value).not.toBeUndefined();
+//     expect(value).not.toBeTruthy();
+// })
+
+
+//number comparison testing 
+test("number comperasion testing ", ()=>{
+    const number = 3+3;
+    expect (number).toBeGreaterThan(5);
+    expect(number).toBeGreaterThanOrEqual(5);
+    expect(number).toBeLessThan(7);
+    expect(number).toBeLessThanOrEqual(7);
+    expect(number).toBe(6);
 })
