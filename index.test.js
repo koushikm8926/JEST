@@ -55,7 +55,14 @@ const multiply = require('./index')
 // })
 
 //float value testing 
-test("float value test ", ()=>{
-    const value = 0.1+0.2;
-    expect(value).toBeCloseTo(0.3,5);
+// test("float value test ", ()=>{
+//     const value = 0.1+0.2;
+//     expect(value).toBeCloseTo(0.3,5);
+// })
+
+//string comparison testing 
+test("string comperasion", ()=>{
+    const name = "Koushik";
+    expect(name).toMatch(/Ko/);
+    expect(name).not.toMatch(/A/)
 })
