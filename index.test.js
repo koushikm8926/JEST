@@ -69,7 +69,18 @@ const multiply = require('./index')
 
 
 //Arrray testing 
-test("array testing ",()=>{
-    const array=["Koushik", "Rahul", "Suman", "Mohit", "Rohan"]
-    expect(array).toContain("Rahul")
+// test("array testing ",()=>{
+//     const array=["Koushik", "Rahul", "Suman", "Mohit", "Rohan"]
+//     expect(array).toContain("Rahul")
+// })
+
+//exception matchers 
+test("exception matches", ()=>{
+    function openInvalidFiles(){
+        throw new Error ("File not found");
+    }
+
+    expect(()=>openInvalidFiles()).toThrow();
+    expect(()=>openInvalidFiles()).toThrow(Error);
+    expect(()=>openInvalidFiles()).toThrow("File not found");
 })
