@@ -45,11 +45,17 @@ const multiply = require('./index')
 
 
 //number comparison testing 
-test("number comperasion testing ", ()=>{
-    const number = 3+3;
-    expect (number).toBeGreaterThan(5);
-    expect(number).toBeGreaterThanOrEqual(5);
-    expect(number).toBeLessThan(7);
-    expect(number).toBeLessThanOrEqual(7);
-    expect(number).toBe(6);
+// test("number comperasion testing ", ()=>{
+//     const number = 3+3;
+//     expect (number).toBeGreaterThan(5);
+//     expect(number).toBeGreaterThanOrEqual(5);
+//     expect(number).toBeLessThan(7);
+//     expect(number).toBeLessThanOrEqual(7);
+//     expect(number).toBe(6);
+// })
+
+//float value testing 
+test("float value test ", ()=>{
+    const value = 0.1+0.2;
+    expect(value).toBeCloseTo(0.3,5);
 })
